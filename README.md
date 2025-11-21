@@ -7,7 +7,8 @@
 - `jupyterlite_beginner_tutorial_with_exercises_v2.ipynb` — JupyterLite の基本操作と演習問題。
 - `pandas_jupyterlite_tutorial.ipynb` — DataFrame の整形と集約テクニック。
 - `matplotlib_jupyterlite_tutorial.ipynb` — グラフ描画の基本とカスタマイズ。
-- `leaflet_folium_jupyterlite_tutorial.ipynb` および `leaflet_folium_jupyterlite_tutorial (1).ipynb` — Folium/Leaflet による地図表示のバリエーション。
+- `leaflet_folium_jupyterlite_tutorial.ipynb` — Folium/Leaflet による地図表示（名古屋市立大学経済学部を中心としたサンプル）。
+- `leaflet_folium_jupyterlite_tutorial_tokai.ipynb` — Folium/Leaflet の発展編（東海4県の GeoJSON 表示）。
 - `statsmodels_jupyterlite_tutorial_v2.ipynb` — 回帰分析と統計モデリングの実践。
 
 Notebook 以外のデータや画像を追加する場合は Notebook 名と同じプリフィックスのサブディレクトリを作成し、トップレベルを整理します。
@@ -27,3 +28,7 @@ Notebook 以外のデータや画像を追加する場合は Notebook 名と同�
 
 ## 更新履歴
 - 2025-11-21: 初版公開。各種 JupyterLite チュートリアルと `AGENTS.md` を追加。
+  - 重複ファイル `leaflet_folium_jupyterlite_tutorial (1).ipynb` を削除。
+  - `leaflet_folium_jupyterlite_tutorial.ipynb` のサンプル座標を浜松市から名古屋市立大学経済学部（滝子キャンパス）に変更。
+  - 各ファイルの緯度経度の記述ミスを修正。
+  - `leaflet_folium_jupyterlite_tutorial_tokai.ipynb` を追加（東海4県の GeoJSON 表示の発展編）。
