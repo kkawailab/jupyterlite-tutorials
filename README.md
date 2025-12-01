@@ -13,7 +13,42 @@
 
 Notebook 以外のデータや画像を追加する場合は Notebook 名と同じプリフィックスのサブディレクトリを作成し、トップレベルを整理します。
 
-## 使い方
+## エンドユーザ向け：チュートリアルの使い方
+
+### 収録コンテンツ
+
+| ファイル | 内容 |
+|---------|------|
+| `jupyterlite_beginner_tutorial_with_exercises_v2.ipynb` | JupyterLite の基本操作と演習問題 |
+| `pandas_jupyterlite_tutorial.ipynb` | DataFrame の整形と集約テクニック |
+| `matplotlib_jupyterlite_tutorial.ipynb` | グラフ描画の基本とカスタマイズ |
+| `leaflet_folium_jupyterlite_tutorial.ipynb` | Folium/Leaflet による地図表示 |
+| `leaflet_folium_jupyterlite_tutorial_tokai.ipynb` | Folium/Leaflet 発展編（東海4県 GeoJSON） |
+| `statsmodels_jupyterlite_tutorial_v2.ipynb` | 回帰分析と統計モデリング |
+
+### 利用方法
+
+1. **ブラウザから直接利用**：JupyterLite でホストされている場合、ブラウザで URL にアクセスするだけで、インストール不要で Notebook を実行できます
+
+2. **ローカルで利用する場合**：
+   ```bash
+   # 仮想環境を作成
+   python -m venv .venv && source .venv/bin/activate
+
+   # JupyterLab をインストール
+   pip install -U jupyterlab
+
+   # Notebook を開く
+   jupyter lab <ファイル名>.ipynb
+   ```
+
+3. **学習の進め方**：
+   - 初心者は `jupyterlite_beginner_tutorial_with_exercises_v2.ipynb` から始めることをお勧めします
+   - 各 Notebook にはセルごとに実行できるコード例と演習問題が含まれています
+   - Shift + Enter でセルを実行しながら進めてください
+
+## 開発者向け：編集とビルド
+
 1. Python 3.10 以上を用意し、仮想環境を作成:
    ```bash
    python -m venv .venv && source .venv/bin/activate
