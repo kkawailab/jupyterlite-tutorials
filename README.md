@@ -22,6 +22,7 @@
 - [`seaborn_intermediate_tutorial.ipynb`](./seaborn_intermediate_tutorial.ipynb) — seaborn 中級：FacetGrid、PairGrid、クラスターマップ、高度なカスタマイズ。
 - [`sklearn_beginner_tutorial.ipynb`](./sklearn_beginner_tutorial.ipynb) — scikit-learn 初級：前処理、線形回帰、分類、モデル評価、交差検証。
 - [`sklearn_intermediate_tutorial.ipynb`](./sklearn_intermediate_tutorial.ipynb) — scikit-learn 中級：アンサンブル学習、ハイパーパラメータチューニング、パイプライン、クラスタリング、次元削減。
+- [`ipywidgets_beginner_tutorial.ipynb`](./ipywidgets_beginner_tutorial.ipynb) — ipywidgets 初級：スライダー、ボタン、ドロップダウン等のUI部品、イベント処理、interact、レイアウト。
 
 ### 練習問題集
 - [`python_beginner_exercises_30.ipynb`](./python_beginner_exercises_30.ipynb) — 初級練習問題30題：Python基礎、NumPy、Pandas、Matplotlib、Seaborn、SciPy、Scikit-learn。
@@ -147,6 +148,7 @@ Jupyter Notebook は「セル」と呼ばれる単位でコードや説明文を
 | [`seaborn_intermediate_tutorial.ipynb`](./seaborn_intermediate_tutorial.ipynb) | seaborn 中級：FacetGrid、クラスターマップ |
 | [`sklearn_beginner_tutorial.ipynb`](./sklearn_beginner_tutorial.ipynb) | scikit-learn 初級：前処理、回帰、分類、評価 |
 | [`sklearn_intermediate_tutorial.ipynb`](./sklearn_intermediate_tutorial.ipynb) | scikit-learn 中級：アンサンブル、チューニング、クラスタリング |
+| [`ipywidgets_beginner_tutorial.ipynb`](./ipywidgets_beginner_tutorial.ipynb) | ipywidgets 初級：UI部品、イベント処理、interact、レイアウト |
 
 #### 練習問題集
 
