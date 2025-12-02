@@ -31,6 +31,100 @@ Notebook 以外のデータや画像を追加する場合は Notebook 名と同�
 
 ## エンドユーザ向け：チュートリアルの使い方
 
+### JupyterLite とは？
+
+JupyterLite は、**ブラウザだけで動く Jupyter 環境**です。通常の Jupyter Notebook は Python のインストールやサーバーの起動が必要ですが、JupyterLite ではそれらが一切不要です。
+
+**JupyterLite のメリット**：
+- インストール不要：ブラウザで URL を開くだけで使える
+- どこでも同じ環境：PC、タブレット、スマートフォンから利用可能
+- 安全：コードはすべてブラウザ内で実行され、サーバーにデータが送られない
+- 初心者に優しい：環境構築でつまずくことがない
+
+### Notebook の基本操作
+
+Jupyter Notebook は「セル」と呼ばれる単位でコードや説明文を管理します。
+
+#### セルの種類
+| セルの種類 | 用途 | 見分け方 |
+|-----------|------|---------|
+| コードセル | Python コードを書いて実行する | 左側に `[ ]:` または `[1]:` のような番号がある |
+| マークダウンセル | 説明文や見出しを書く | 実行すると整形されたテキストになる |
+
+#### 基本的なキーボードショートカット
+
+| 操作 | ショートカット | 説明 |
+|------|---------------|------|
+| セルを実行 | `Shift + Enter` | 現在のセルを実行し、次のセルに移動 |
+| セルを実行（移動なし） | `Ctrl + Enter` | 現在のセルを実行し、そのセルにとどまる |
+| 上にセルを追加 | `A` | コマンドモードで押すと、上に新しいセルを追加 |
+| 下にセルを追加 | `B` | コマンドモードで押すと、下に新しいセルを追加 |
+| セルを削除 | `D` を2回 | コマンドモードで `D` を2回押すとセルを削除 |
+| コードセルに変更 | `Y` | コマンドモードで押すとコードセルに変更 |
+| マークダウンセルに変更 | `M` | コマンドモードで押すとマークダウンセルに変更 |
+| 編集モード → コマンドモード | `Esc` | セルの編集を終了 |
+| コマンドモード → 編集モード | `Enter` | セルの編集を開始 |
+
+> **💡 ヒント**：セルの左側をクリックすると青色（コマンドモード）、セル内をクリックすると緑色（編集モード）になります。
+
+#### セルの実行順序について
+
+- セルは**上から順番に実行する**のが基本です
+- 途中のセルをスキップすると、変数が定義されずエラーになることがあります
+- エラーが出たら、まず上のセルから順番に実行し直してみてください
+
+### 推奨学習パス
+
+プログラミング経験に応じて、以下の順序で学習することをお勧めします。
+
+#### 🔰 プログラミング初心者の方
+
+```
+1. jupyterlite_beginner_tutorial_with_exercises_v2.ipynb（JupyterLite の操作に慣れる）
+    ↓
+2. numpy_beginner_tutorial.ipynb（配列計算の基礎）
+    ↓
+3. pandas_beginner_tutorial.ipynb（データ操作の基礎）
+    ↓
+4. matplotlib_beginner_tutorial.ipynb（グラフ作成の基礎）
+    ↓
+5. python_beginner_exercises_30.ipynb（練習問題で復習）
+```
+
+#### 📊 データ分析を学びたい方
+
+```
+1. pandas_beginner_tutorial.ipynb → pandas_intermediate_tutorial.ipynb
+    ↓
+2. scipy_stats_beginner_tutorial.ipynb（統計の基礎）
+    ↓
+3. seaborn_beginner_tutorial.ipynb（統計的可視化）
+    ↓
+4. statsmodels_jupyterlite_tutorial_v2.ipynb（回帰分析）
+```
+
+#### 🤖 機械学習を学びたい方
+
+```
+1. numpy_beginner_tutorial.ipynb → numpy_intermediate_tutorial.ipynb
+    ↓
+2. pandas_beginner_tutorial.ipynb → pandas_intermediate_tutorial.ipynb
+    ↓
+3. sklearn_beginner_tutorial.ipynb → sklearn_intermediate_tutorial.ipynb
+    ↓
+4. python_intermediate_exercises_30.ipynb（応用問題で力試し）
+```
+
+#### 🗺️ 地理データの可視化を学びたい方
+
+```
+1. matplotlib_beginner_tutorial.ipynb（グラフの基礎）
+    ↓
+2. leaflet_folium_jupyterlite_tutorial.ipynb（地図表示の基礎）
+    ↓
+3. leaflet_folium_jupyterlite_tutorial_tokai.ipynb（GeoJSON の活用）
+```
+
 ### 収録コンテンツ
 
 | ファイル | 内容 |
@@ -81,6 +175,81 @@ Notebook 以外のデータや画像を追加する場合は Notebook 名と同�
    - 初心者は `jupyterlite_beginner_tutorial_with_exercises_v2.ipynb` から始めることをお勧めします
    - 各 Notebook にはセルごとに実行できるコード例と演習問題が含まれています
    - Shift + Enter でセルを実行しながら進めてください
+
+### よくある質問（FAQ）
+
+<details>
+<summary><strong>Q: セルを実行したのに何も表示されません</strong></summary>
+
+**A**: 以下を確認してください：
+- セルの左側に `[*]:` と表示されている場合は、まだ実行中です。少し待ってください
+- 変数への代入だけのセル（例：`x = 10`）は、何も出力されないのが正常です
+- 結果を表示したい場合は `print(x)` や、セルの最後に変数名だけを書いてください
+</details>
+
+<details>
+<summary><strong>Q: 「NameError: name 'xxx' is not defined」というエラーが出ます</strong></summary>
+
+**A**: その変数がまだ定義されていません。考えられる原因：
+1. 変数を定義しているセルをまだ実行していない → 上のセルから順番に実行してください
+2. ページをリロードした → すべてのセルを最初から実行し直してください
+3. カーネルを再起動した → メニューから「Run All」を選んでください
+</details>
+
+<details>
+<summary><strong>Q: グラフが表示されません</strong></summary>
+
+**A**: JupyterLite では、グラフを表示するために以下が必要です：
+```python
+import matplotlib.pyplot as plt
+%matplotlib inline  # この行が必要な場合があります
+
+# グラフを描画
+plt.plot([1, 2, 3], [1, 4, 9])
+plt.show()  # 明示的に表示
+```
+</details>
+
+<details>
+<summary><strong>Q: 作業内容は保存されますか？</strong></summary>
+
+**A**: JupyterLite の保存動作はブラウザのローカルストレージに依存します：
+- `Ctrl + S`（Mac: `Cmd + S`）で手動保存できます
+- ブラウザのキャッシュをクリアすると、保存内容が消える可能性があります
+- 大切な作業は、メニューから「Download」を選んで `.ipynb` ファイルとしてダウンロードしておくことをお勧めします
+</details>
+
+<details>
+<summary><strong>Q: 日本語が文字化けします</strong></summary>
+
+**A**: matplotlib で日本語を表示する場合、フォント設定が必要です：
+```python
+import matplotlib.pyplot as plt
+plt.rcParams['font.family'] = 'DejaVu Sans'  # または利用可能なフォント
+```
+JupyterLite 環境では日本語フォントが限られるため、チュートリアル内の指示に従ってください。
+</details>
+
+<details>
+<summary><strong>Q: ライブラリをインストールできますか？</strong></summary>
+
+**A**: JupyterLite で追加ライブラリをインストールするには：
+```python
+import micropip
+await micropip.install('パッケージ名')
+```
+ただし、すべてのライブラリが JupyterLite に対応しているわけではありません。対応していないライブラリを使いたい場合は、ローカル環境での実行をお勧めします。
+</details>
+
+### トラブルシューティング
+
+問題が解決しない場合は、以下の手順を試してください：
+
+1. **ページをリロード**：ブラウザの更新ボタンを押す
+2. **カーネルを再起動**：メニューから「Kernel」→「Restart Kernel」を選択
+3. **すべてのセルを実行**：メニューから「Run」→「Run All Cells」を選択
+4. **ブラウザを変更**：Chrome、Firefox、Edge など別のブラウザで試す
+5. **シークレットモード**：ブラウザ拡張機能が干渉している可能性がある場合に有効
 
 ## 開発者向け：編集とビルド
 
