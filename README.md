@@ -268,6 +268,8 @@ await micropip.install('パッケージ名')
 5. すべての Notebook が問題なく動くか確認するには `jupyter nbconvert --execute --inplace <notebook>.ipynb` を利用してください。ランダム性のあるセルではシードを固定します。
 
 ## 更新履歴
+- 2025-12-03: 全チュートリアルの体裁を統一。タイトル形式、対象者セクション、環境準備、練習問題形式、まとめ・総合演習セクションを標準化。
+- 2025-12-02: ipywidgets 初級チュートリアルを追加（`ipywidgets_beginner_tutorial.ipynb`）。
 - 2025-12-02: 練習問題集を追加（`python_beginner_exercises_30.ipynb`, `python_intermediate_exercises_30.ipynb`）。初級30題・中級30題の計60題。
 - 2025-12-02: NumPy、seaborn、scikit-learn の初級・中級チュートリアルを追加。
 - 2025-12-02: scipy.stats 初級・中級チュートリアルを追加（`scipy_stats_beginner_tutorial.ipynb`, `scipy_stats_intermediate_tutorial.ipynb`）。
