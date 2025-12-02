@@ -23,6 +23,10 @@
 - [`sklearn_beginner_tutorial.ipynb`](./sklearn_beginner_tutorial.ipynb) — scikit-learn 初級：前処理、線形回帰、分類、モデル評価、交差検証。
 - [`sklearn_intermediate_tutorial.ipynb`](./sklearn_intermediate_tutorial.ipynb) — scikit-learn 中級：アンサンブル学習、ハイパーパラメータチューニング、パイプライン、クラスタリング、次元削減。
 
+### 練習問題集
+- [`python_beginner_exercises_30.ipynb`](./python_beginner_exercises_30.ipynb) — 初級練習問題30題：Python基礎、NumPy、Pandas、Matplotlib、Seaborn、SciPy、Scikit-learn。
+- [`python_intermediate_exercises_30.ipynb`](./python_intermediate_exercises_30.ipynb) — 中級練習問題30題：線形代数、groupby、サブプロット、仮説検定、アンサンブル学習など。
+
 Notebook 以外のデータや画像を追加する場合は Notebook 名と同じプリフィックスのサブディレクトリを作成し、トップレベルを整理します。
 
 ## エンドユーザ向け：チュートリアルの使い方
@@ -49,6 +53,13 @@ Notebook 以外のデータや画像を追加する場合は Notebook 名と同�
 | [`seaborn_intermediate_tutorial.ipynb`](./seaborn_intermediate_tutorial.ipynb) | seaborn 中級：FacetGrid、クラスターマップ |
 | [`sklearn_beginner_tutorial.ipynb`](./sklearn_beginner_tutorial.ipynb) | scikit-learn 初級：前処理、回帰、分類、評価 |
 | [`sklearn_intermediate_tutorial.ipynb`](./sklearn_intermediate_tutorial.ipynb) | scikit-learn 中級：アンサンブル、チューニング、クラスタリング |
+
+#### 練習問題集
+
+| ファイル | 内容 |
+|---------|------|
+| [`python_beginner_exercises_30.ipynb`](./python_beginner_exercises_30.ipynb) | 初級練習問題30題（Python基礎〜Scikit-learn） |
+| [`python_intermediate_exercises_30.ipynb`](./python_intermediate_exercises_30.ipynb) | 中級練習問題30題（線形代数、仮説検定、機械学習など） |
 
 ### 利用方法
 
@@ -86,6 +97,7 @@ Notebook 以外のデータや画像を追加する場合は Notebook 名と同�
 5. すべての Notebook が問題なく動くか確認するには `jupyter nbconvert --execute --inplace <notebook>.ipynb` を利用してください。ランダム性のあるセルではシードを固定します。
 
 ## 更新履歴
+- 2025-12-02: 練習問題集を追加（`python_beginner_exercises_30.ipynb`, `python_intermediate_exercises_30.ipynb`）。初級30題・中級30題の計60題。
 - 2025-12-02: NumPy、seaborn、scikit-learn の初級・中級チュートリアルを追加。
 - 2025-12-02: scipy.stats 初級・中級チュートリアルを追加（`scipy_stats_beginner_tutorial.ipynb`, `scipy_stats_intermediate_tutorial.ipynb`）。
 - 2025-12-02: matplotlib 初級・中級チュートリアルを追加（`matplotlib_beginner_tutorial.ipynb`, `matplotlib_intermediate_tutorial.ipynb`）。
